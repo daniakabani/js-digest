@@ -1,0 +1,37 @@
+{
+  "name": "js-digest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CLI-first aggregator for JS/TS ecosystem updates with LLM summarization, using Bun.",
+  "license": "MIT",
+  "scripts": {
+    "build": "bun x tsc --noEmit",
+    "lint": "bun x eslint . --ext .ts,.tsx --max-warnings=0",
+    "format": "bun x prettier --write .",
+    "test": "bun test",
+    "run-once": "bun run bin/cli.ts run-once",
+    "collect": "bun run bin/cli.ts collect",
+    "process": "bun run bin/cli.ts process",
+    "list-drafts": "bun run bin/cli.ts list-drafts",
+    "preview": "bun run bin/cli.ts preview",
+    "approve": "bun run bin/cli.ts approve",
+    "publish": "bun run bin/cli.ts publish",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^22.7.5",
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "husky": "^9.1.5",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0",
+    "openai": "^4.58.1"
+  }
+}

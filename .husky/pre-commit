@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Running lint & tests..."
+bun x eslint . --ext .ts,.tsx || exit 1
+bun test || exit 1

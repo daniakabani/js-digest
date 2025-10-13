@@ -1,0 +1,10 @@
+node_modules
+bun.lockb
+.env
+.data
+coverage
+build
+dist
+/data/db.sqlite
+/data/*.json
+.idea
