@@ -1,4 +1,7 @@
-export async function withRetries<T>(fn: () => Promise<T>, opts?: { retries?: number; baseDelayMs?: number; factor?: number }): Promise<T> {
+export async function withRetries<T>(
+  fn: () => Promise<T>,
+  opts?: { retries?: number; baseDelayMs?: number; factor?: number },
+): Promise<T> {
   const retries = opts?.retries ?? 3;
   const base = opts?.baseDelayMs ?? 400;
   const factor = opts?.factor ?? 2;

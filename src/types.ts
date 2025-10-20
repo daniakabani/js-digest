@@ -1,4 +1,4 @@
-export type SourceType = "rss" | "github-releases";
+export type SourceType = 'rss' | 'github-releases';
 
 export interface Source {
   id: string;
